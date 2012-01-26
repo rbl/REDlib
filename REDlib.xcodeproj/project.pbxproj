@@ -1,0 +1,865 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D2AD0DA14CFA55700D9A4FB /* REDLogSink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2AD0DD14CFA6BB00D9A4FB /* REDSinglePostSink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2AD0DB14CFA6BB00D9A4FB /* REDSinglePostSink.h */; };
+		3D2AD0DE14CFA6BB00D9A4FB /* REDSinglePostSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AD0DC14CFA6BB00D9A4FB /* REDSinglePostSink.m */; };
+		3D663E5414CFBD1200428ECC /* REDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D663E5214CFBD1200428ECC /* REDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D663E5514CFBD1200428ECC /* REDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D663E5314CFBD1200428ECC /* REDLog.m */; };
+		3D7787D114AE89DC0061765D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787D014AE89DC0061765D /* Foundation.framework */; };
+		3D7787DF14AE89DC0061765D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787DE14AE89DC0061765D /* SenTestingKit.framework */; };
+		3D7787E114AE89DD0061765D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787E014AE89DD0061765D /* UIKit.framework */; };
+		3D7787E214AE89DD0061765D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787D014AE89DC0061765D /* Foundation.framework */; };
+		3D7787E414AE89DD0061765D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787E314AE89DD0061765D /* CoreGraphics.framework */; };
+		3D7787E714AE89DD0061765D /* libREDlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787CD14AE89DC0061765D /* libREDlib.a */; };
+		3D7787ED14AE89DD0061765D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D7787EB14AE89DD0061765D /* InfoPlist.strings */; };
+		3D7787F014AE89DD0061765D /* REDlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7787EF14AE89DD0061765D /* REDlibTests.m */; };
+		3D77881114AE8FC30061765D /* REDlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77880F14AE8FC30061765D /* REDlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D77881214AE8FC30061765D /* ExampleREDParms.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881014AE8FC30061765D /* ExampleREDParms.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D77883314AE8FD60061765D /* REDlibInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881314AE8FD60061765D /* REDlibInternal.h */; };
+		3D77883414AE8FD60061765D /* REDlibInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881414AE8FD60061765D /* REDlibInternal.m */; };
+		3D77883514AE8FD60061765D /* REDRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881514AE8FD60061765D /* REDRegistry.h */; };
+		3D77883614AE8FD60061765D /* REDRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881614AE8FD60061765D /* REDRegistry.m */; };
+		3D77883714AE8FD60061765D /* REDParamsNumberEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */; };
+		3D77883814AE8FD60061765D /* REDParamsNumberEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */; };
+		3D77883914AE8FD60061765D /* REDPhoneRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881B14AE8FD60061765D /* REDPhoneRoot.h */; };
+		3D77883A14AE8FD60061765D /* REDPhoneRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881C14AE8FD60061765D /* REDPhoneRoot.m */; };
+		3D77883B14AE8FD60061765D /* REDTabParamsRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */; };
+		3D77883C14AE8FD60061765D /* REDTabParamsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */; };
+		3D77883D14AE8FD60061765D /* REDTabSetsRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */; };
+		3D77883E14AE8FD60061765D /* REDTabSetsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882014AE8FD60061765D /* REDTabSetsRoot.m */; };
+		3D77883F14AE8FD60061765D /* REDAdjustmentPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882114AE8FD60061765D /* REDAdjustmentPopover.h */; };
+		3D77884014AE8FD60061765D /* REDAdjustmentPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882214AE8FD60061765D /* REDAdjustmentPopover.m */; };
+		3D77884114AE8FD60061765D /* REDImageFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882314AE8FD60061765D /* REDImageFactory.h */; };
+		3D77884214AE8FD60061765D /* REDImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882414AE8FD60061765D /* REDImageFactory.m */; };
+		3D77884314AE8FD60061765D /* REDMainSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882514AE8FD60061765D /* REDMainSelector.h */; };
+		3D77884414AE8FD60061765D /* REDMainSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882614AE8FD60061765D /* REDMainSelector.m */; };
+		3D77884514AE8FD60061765D /* REDNudger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882714AE8FD60061765D /* REDNudger.h */; };
+		3D77884614AE8FD60061765D /* REDNudger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882814AE8FD60061765D /* REDNudger.m */; };
+		3D77884714AE8FD60061765D /* REDNumericalAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882914AE8FD60061765D /* REDNumericalAdjustment.h */; };
+		3D77884814AE8FD60061765D /* REDNumericalAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882A14AE8FD60061765D /* REDNumericalAdjustment.m */; };
+		3D77884914AE8FD60061765D /* REDOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882B14AE8FD60061765D /* REDOverlay.h */; };
+		3D77884A14AE8FD60061765D /* REDOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882C14AE8FD60061765D /* REDOverlay.m */; };
+		3D77884B14AE8FD60061765D /* REDParamPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882D14AE8FD60061765D /* REDParamPicker.h */; };
+		3D77884C14AE8FD60061765D /* REDParamPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77882E14AE8FD60061765D /* REDParamPicker.m */; };
+		3D77884D14AE8FD60061765D /* REDParamSelectPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77882F14AE8FD60061765D /* REDParamSelectPopover.h */; };
+		3D77884E14AE8FD60061765D /* REDParamSelectPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77883014AE8FD60061765D /* REDParamSelectPopover.m */; };
+		3D77884F14AE8FD60061765D /* REDPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77883114AE8FD60061765D /* REDPopover.h */; };
+		3D77885014AE8FD60061765D /* REDPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77883214AE8FD60061765D /* REDPopover.m */; };
+		3D88C73C14AE97A60029632F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787E014AE89DD0061765D /* UIKit.framework */; };
+		3D88C73D14AE97A60029632F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787D014AE89DC0061765D /* Foundation.framework */; };
+		3D88C73E14AE97A60029632F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787E314AE89DD0061765D /* CoreGraphics.framework */; };
+		3D88C74414AE97A60029632F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D88C74214AE97A60029632F /* InfoPlist.strings */; };
+		3D88C74614AE97A60029632F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C74514AE97A60029632F /* main.m */; };
+		3D88C74A14AE97A60029632F /* REDlibExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C74914AE97A60029632F /* REDlibExampleAppDelegate.m */; };
+		3D88C74D14AE97A60029632F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D88C74B14AE97A60029632F /* MainStoryboard_iPhone.storyboard */; };
+		3D88C75014AE97A60029632F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D88C74E14AE97A60029632F /* MainStoryboard_iPad.storyboard */; };
+		3D88C75314AE97A60029632F /* REDlibExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C75214AE97A60029632F /* REDlibExampleViewController.m */; };
+		3D88C75814AE98500029632F /* libREDlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787CD14AE89DC0061765D /* libREDlib.a */; };
+		3D88C76214AEA2D10029632F /* REDSliderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C76014AEA2D10029632F /* REDSliderView.h */; };
+		3D88C76314AEA2D10029632F /* REDSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C76114AEA2D10029632F /* REDSliderView.m */; };
+		3D88C76614AEACB90029632F /* REDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C76414AEACB80029632F /* REDWindow.h */; };
+		3D88C76714AEACB90029632F /* REDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C76514AEACB80029632F /* REDWindow.m */; };
+		3D88C76A14AEACDF0029632F /* REDPhoneWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C76814AEACDF0029632F /* REDPhoneWindow.h */; };
+		3D88C76B14AEACDF0029632F /* REDPhoneWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C76914AEACDF0029632F /* REDPhoneWindow.m */; };
+		3D88C76F14AEB03E0029632F /* REDPadWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C76D14AEB03E0029632F /* REDPadWindow.h */; };
+		3D88C77014AEB03E0029632F /* REDPadWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C76E14AEB03E0029632F /* REDPadWindow.m */; };
+		3D88C77314AEB0CB0029632F /* REDFloatingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C77114AEB0CA0029632F /* REDFloatingViewController.h */; };
+		3D88C77414AEB0CB0029632F /* REDFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C77214AEB0CA0029632F /* REDFloatingViewController.m */; };
+		3D88C77714AEBAF30029632F /* REDInsetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88C77514AEBAF20029632F /* REDInsetViewController.h */; };
+		3D88C77814AEBAF30029632F /* REDInsetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88C77614AEBAF30029632F /* REDInsetViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D7787E514AE89DD0061765D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D7787C414AE89DC0061765D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D7787CC14AE89DC0061765D;
+			remoteInfo = REDlib;
+		};
+		3D88C75914AE98680029632F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D7787C414AE89DC0061765D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D7787CC14AE89DC0061765D;
+			remoteInfo = REDlib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REDLogSink.h; path = ../REDlib/log/REDLogSink.h; sourceTree = "<group>"; };
+		3D2AD0DB14CFA6BB00D9A4FB /* REDSinglePostSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDSinglePostSink.h; sourceTree = "<group>"; };
+		3D2AD0DC14CFA6BB00D9A4FB /* REDSinglePostSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDSinglePostSink.m; sourceTree = "<group>"; };
+		3D663E5214CFBD1200428ECC /* REDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REDLog.h; path = ../REDlib/log/REDLog.h; sourceTree = "<group>"; };
+		3D663E5314CFBD1200428ECC /* REDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDLog.m; sourceTree = "<group>"; };
+		3D7787CD14AE89DC0061765D /* libREDlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libREDlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7787D014AE89DC0061765D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D7787D414AE89DC0061765D /* REDlib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REDlib-Prefix.pch"; sourceTree = "<group>"; };
+		3D7787DD14AE89DC0061765D /* REDlibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REDlibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7787DE14AE89DC0061765D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D7787E014AE89DD0061765D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D7787E314AE89DD0061765D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		3D7787EA14AE89DD0061765D /* REDlibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "REDlibTests-Info.plist"; sourceTree = "<group>"; };
+		3D7787EC14AE89DD0061765D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D7787EE14AE89DD0061765D /* REDlibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REDlibTests.h; sourceTree = "<group>"; };
+		3D7787EF14AE89DD0061765D /* REDlibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REDlibTests.m; sourceTree = "<group>"; };
+		3D77880114AE8E850061765D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3D77880514AE8E850061765D /* REDlibMedia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "REDlibMedia-Info.plist"; sourceTree = "<group>"; };
+		3D77880714AE8E850061765D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D77880914AE8E850061765D /* REDlibMedia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REDlibMedia-Prefix.pch"; sourceTree = "<group>"; };
+		3D77880F14AE8FC30061765D /* REDlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDlib.h; sourceTree = "<group>"; };
+		3D77881014AE8FC30061765D /* ExampleREDParms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleREDParms.h; sourceTree = "<group>"; };
+		3D77881314AE8FD60061765D /* REDlibInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = REDlibInternal.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3D77881414AE8FD60061765D /* REDlibInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDlibInternal.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3D77881514AE8FD60061765D /* REDRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDRegistry.h; sourceTree = "<group>"; };
+		3D77881614AE8FD60061765D /* REDRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDRegistry.m; sourceTree = "<group>"; };
+		3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDParamsNumberEditor.h; sourceTree = "<group>"; };
+		3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDParamsNumberEditor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3D77881B14AE8FD60061765D /* REDPhoneRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPhoneRoot.h; sourceTree = "<group>"; };
+		3D77881C14AE8FD60061765D /* REDPhoneRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPhoneRoot.m; sourceTree = "<group>"; };
+		3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDTabParamsRoot.h; sourceTree = "<group>"; };
+		3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDTabParamsRoot.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDTabSetsRoot.h; sourceTree = "<group>"; };
+		3D77882014AE8FD60061765D /* REDTabSetsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDTabSetsRoot.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3D77882114AE8FD60061765D /* REDAdjustmentPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDAdjustmentPopover.h; sourceTree = "<group>"; };
+		3D77882214AE8FD60061765D /* REDAdjustmentPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDAdjustmentPopover.m; sourceTree = "<group>"; };
+		3D77882314AE8FD60061765D /* REDImageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDImageFactory.h; sourceTree = "<group>"; };
+		3D77882414AE8FD60061765D /* REDImageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDImageFactory.m; sourceTree = "<group>"; };
+		3D77882514AE8FD60061765D /* REDMainSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDMainSelector.h; sourceTree = "<group>"; };
+		3D77882614AE8FD60061765D /* REDMainSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDMainSelector.m; sourceTree = "<group>"; };
+		3D77882714AE8FD60061765D /* REDNudger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDNudger.h; sourceTree = "<group>"; };
+		3D77882814AE8FD60061765D /* REDNudger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDNudger.m; sourceTree = "<group>"; };
+		3D77882914AE8FD60061765D /* REDNumericalAdjustment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDNumericalAdjustment.h; sourceTree = "<group>"; };
+		3D77882A14AE8FD60061765D /* REDNumericalAdjustment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDNumericalAdjustment.m; sourceTree = "<group>"; };
+		3D77882B14AE8FD60061765D /* REDOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDOverlay.h; sourceTree = "<group>"; };
+		3D77882C14AE8FD60061765D /* REDOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDOverlay.m; sourceTree = "<group>"; };
+		3D77882D14AE8FD60061765D /* REDParamPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDParamPicker.h; sourceTree = "<group>"; };
+		3D77882E14AE8FD60061765D /* REDParamPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDParamPicker.m; sourceTree = "<group>"; };
+		3D77882F14AE8FD60061765D /* REDParamSelectPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDParamSelectPopover.h; sourceTree = "<group>"; };
+		3D77883014AE8FD60061765D /* REDParamSelectPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDParamSelectPopover.m; sourceTree = "<group>"; };
+		3D77883114AE8FD60061765D /* REDPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPopover.h; sourceTree = "<group>"; };
+		3D77883214AE8FD60061765D /* REDPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPopover.m; sourceTree = "<group>"; };
+		3D88C73A14AE97A60029632F /* REDlibExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REDlibExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D88C74114AE97A60029632F /* REDlibExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "REDlibExample-Info.plist"; sourceTree = "<group>"; };
+		3D88C74314AE97A60029632F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D88C74514AE97A60029632F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D88C74714AE97A60029632F /* REDlibExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REDlibExample-Prefix.pch"; sourceTree = "<group>"; };
+		3D88C74814AE97A60029632F /* REDlibExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REDlibExampleAppDelegate.h; sourceTree = "<group>"; };
+		3D88C74914AE97A60029632F /* REDlibExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REDlibExampleAppDelegate.m; sourceTree = "<group>"; };
+		3D88C74C14AE97A60029632F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3D88C74F14AE97A60029632F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3D88C75114AE97A60029632F /* REDlibExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REDlibExampleViewController.h; sourceTree = "<group>"; };
+		3D88C75214AE97A60029632F /* REDlibExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REDlibExampleViewController.m; sourceTree = "<group>"; };
+		3D88C75F14AE9E630029632F /* REDlibExampleParms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDlibExampleParms.h; sourceTree = "<group>"; };
+		3D88C76014AEA2D10029632F /* REDSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDSliderView.h; sourceTree = "<group>"; };
+		3D88C76114AEA2D10029632F /* REDSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDSliderView.m; sourceTree = "<group>"; };
+		3D88C76414AEACB80029632F /* REDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDWindow.h; sourceTree = "<group>"; };
+		3D88C76514AEACB80029632F /* REDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDWindow.m; sourceTree = "<group>"; };
+		3D88C76814AEACDF0029632F /* REDPhoneWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPhoneWindow.h; sourceTree = "<group>"; };
+		3D88C76914AEACDF0029632F /* REDPhoneWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPhoneWindow.m; sourceTree = "<group>"; };
+		3D88C76D14AEB03E0029632F /* REDPadWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPadWindow.h; sourceTree = "<group>"; };
+		3D88C76E14AEB03E0029632F /* REDPadWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPadWindow.m; sourceTree = "<group>"; };
+		3D88C77114AEB0CA0029632F /* REDFloatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDFloatingViewController.h; sourceTree = "<group>"; };
+		3D88C77214AEB0CA0029632F /* REDFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDFloatingViewController.m; sourceTree = "<group>"; };
+		3D88C77514AEBAF20029632F /* REDInsetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDInsetViewController.h; sourceTree = "<group>"; };
+		3D88C77614AEBAF30029632F /* REDInsetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDInsetViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D7787CA14AE89DC0061765D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7787D114AE89DC0061765D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7787D914AE89DC0061765D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7787DF14AE89DC0061765D /* SenTestingKit.framework in Frameworks */,
+				3D7787E114AE89DD0061765D /* UIKit.framework in Frameworks */,
+				3D7787E214AE89DD0061765D /* Foundation.framework in Frameworks */,
+				3D7787E414AE89DD0061765D /* CoreGraphics.framework in Frameworks */,
+				3D7787E714AE89DD0061765D /* libREDlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D88C73714AE97A60029632F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D88C75814AE98500029632F /* libREDlib.a in Frameworks */,
+				3D88C73C14AE97A60029632F /* UIKit.framework in Frameworks */,
+				3D88C73D14AE97A60029632F /* Foundation.framework in Frameworks */,
+				3D88C73E14AE97A60029632F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D2AD0D714CFA51300D9A4FB /* log */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AD0DB14CFA6BB00D9A4FB /* REDSinglePostSink.h */,
+				3D2AD0DC14CFA6BB00D9A4FB /* REDSinglePostSink.m */,
+				3D663E5314CFBD1200428ECC /* REDLog.m */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		3D7787C214AE89DC0061765D = {
+			isa = PBXGroup;
+			children = (
+				3D7787D214AE89DC0061765D /* REDlib */,
+				3D7787E814AE89DD0061765D /* REDlibTests */,
+				3D77880314AE8E850061765D /* REDlibMedia */,
+				3D88C73F14AE97A60029632F /* REDlibExample */,
+				3D7787CF14AE89DC0061765D /* Frameworks */,
+				3D7787CE14AE89DC0061765D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D7787CE14AE89DC0061765D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D7787CD14AE89DC0061765D /* libREDlib.a */,
+				3D7787DD14AE89DC0061765D /* REDlibTests.octest */,
+				3D88C73A14AE97A60029632F /* REDlibExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D7787CF14AE89DC0061765D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D7787D014AE89DC0061765D /* Foundation.framework */,
+				3D7787DE14AE89DC0061765D /* SenTestingKit.framework */,
+				3D7787E014AE89DD0061765D /* UIKit.framework */,
+				3D7787E314AE89DD0061765D /* CoreGraphics.framework */,
+				3D77880114AE8E850061765D /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D7787D214AE89DC0061765D /* REDlib */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AD0D714CFA51300D9A4FB /* log */,
+				3D77881314AE8FD60061765D /* REDlibInternal.h */,
+				3D77881414AE8FD60061765D /* REDlibInternal.m */,
+				3D77881514AE8FD60061765D /* REDRegistry.h */,
+				3D77881614AE8FD60061765D /* REDRegistry.m */,
+				3D77881714AE8FD60061765D /* ui */,
+				3D77880E14AE8FC30061765D /* include */,
+				3D7787D314AE89DC0061765D /* Supporting Files */,
+			);
+			path = REDlib;
+			sourceTree = "<group>";
+		};
+		3D7787D314AE89DC0061765D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D7787D414AE89DC0061765D /* REDlib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D7787E814AE89DD0061765D /* REDlibTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D7787EE14AE89DD0061765D /* REDlibTests.h */,
+				3D7787EF14AE89DD0061765D /* REDlibTests.m */,
+				3D7787E914AE89DD0061765D /* Supporting Files */,
+			);
+			path = REDlibTests;
+			sourceTree = "<group>";
+		};
+		3D7787E914AE89DD0061765D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D7787EA14AE89DD0061765D /* REDlibTests-Info.plist */,
+				3D7787EB14AE89DD0061765D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D77880314AE8E850061765D /* REDlibMedia */ = {
+			isa = PBXGroup;
+			children = (
+				3D77880414AE8E850061765D /* Supporting Files */,
+			);
+			path = REDlibMedia;
+			sourceTree = "<group>";
+		};
+		3D77880414AE8E850061765D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D77880514AE8E850061765D /* REDlibMedia-Info.plist */,
+				3D77880614AE8E850061765D /* InfoPlist.strings */,
+				3D77880914AE8E850061765D /* REDlibMedia-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D77880E14AE8FC30061765D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3D77880F14AE8FC30061765D /* REDlib.h */,
+				3D663E5214CFBD1200428ECC /* REDLog.h */,
+				3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */,
+				3D77881014AE8FC30061765D /* ExampleREDParms.h */,
+			);
+			path = include;
+			sourceTree = SOURCE_ROOT;
+		};
+		3D77881714AE8FD60061765D /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				3D88C76C14AEB03E0029632F /* iPad */,
+				3D77881814AE8FD60061765D /* iPhone */,
+				3D77882114AE8FD60061765D /* REDAdjustmentPopover.h */,
+				3D77882214AE8FD60061765D /* REDAdjustmentPopover.m */,
+				3D77882314AE8FD60061765D /* REDImageFactory.h */,
+				3D77882414AE8FD60061765D /* REDImageFactory.m */,
+				3D77882514AE8FD60061765D /* REDMainSelector.h */,
+				3D77882614AE8FD60061765D /* REDMainSelector.m */,
+				3D77882714AE8FD60061765D /* REDNudger.h */,
+				3D77882814AE8FD60061765D /* REDNudger.m */,
+				3D77882914AE8FD60061765D /* REDNumericalAdjustment.h */,
+				3D77882A14AE8FD60061765D /* REDNumericalAdjustment.m */,
+				3D77882B14AE8FD60061765D /* REDOverlay.h */,
+				3D77882C14AE8FD60061765D /* REDOverlay.m */,
+				3D77882D14AE8FD60061765D /* REDParamPicker.h */,
+				3D77882E14AE8FD60061765D /* REDParamPicker.m */,
+				3D77882F14AE8FD60061765D /* REDParamSelectPopover.h */,
+				3D77883014AE8FD60061765D /* REDParamSelectPopover.m */,
+				3D77883114AE8FD60061765D /* REDPopover.h */,
+				3D77883214AE8FD60061765D /* REDPopover.m */,
+				3D88C76014AEA2D10029632F /* REDSliderView.h */,
+				3D88C76114AEA2D10029632F /* REDSliderView.m */,
+				3D88C76414AEACB80029632F /* REDWindow.h */,
+				3D88C76514AEACB80029632F /* REDWindow.m */,
+				3D88C77114AEB0CA0029632F /* REDFloatingViewController.h */,
+				3D88C77214AEB0CA0029632F /* REDFloatingViewController.m */,
+				3D88C77514AEBAF20029632F /* REDInsetViewController.h */,
+				3D88C77614AEBAF30029632F /* REDInsetViewController.m */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		3D77881814AE8FD60061765D /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */,
+				3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */,
+				3D77881B14AE8FD60061765D /* REDPhoneRoot.h */,
+				3D77881C14AE8FD60061765D /* REDPhoneRoot.m */,
+				3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */,
+				3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */,
+				3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */,
+				3D77882014AE8FD60061765D /* REDTabSetsRoot.m */,
+				3D88C76814AEACDF0029632F /* REDPhoneWindow.h */,
+				3D88C76914AEACDF0029632F /* REDPhoneWindow.m */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		3D88C73F14AE97A60029632F /* REDlibExample */ = {
+			isa = PBXGroup;
+			children = (
+				3D88C74814AE97A60029632F /* REDlibExampleAppDelegate.h */,
+				3D88C74914AE97A60029632F /* REDlibExampleAppDelegate.m */,
+				3D88C74B14AE97A60029632F /* MainStoryboard_iPhone.storyboard */,
+				3D88C74E14AE97A60029632F /* MainStoryboard_iPad.storyboard */,
+				3D88C75114AE97A60029632F /* REDlibExampleViewController.h */,
+				3D88C75214AE97A60029632F /* REDlibExampleViewController.m */,
+				3D88C74014AE97A60029632F /* Supporting Files */,
+				3D88C75F14AE9E630029632F /* REDlibExampleParms.h */,
+			);
+			path = REDlibExample;
+			sourceTree = "<group>";
+		};
+		3D88C74014AE97A60029632F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D88C74114AE97A60029632F /* REDlibExample-Info.plist */,
+				3D88C74214AE97A60029632F /* InfoPlist.strings */,
+				3D88C74514AE97A60029632F /* main.m */,
+				3D88C74714AE97A60029632F /* REDlibExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D88C76C14AEB03E0029632F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3D88C76D14AEB03E0029632F /* REDPadWindow.h */,
+				3D88C76E14AEB03E0029632F /* REDPadWindow.m */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3D7787CB14AE89DC0061765D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D77881114AE8FC30061765D /* REDlib.h in Headers */,
+				3D77881214AE8FC30061765D /* ExampleREDParms.h in Headers */,
+				3D77883314AE8FD60061765D /* REDlibInternal.h in Headers */,
+				3D77883514AE8FD60061765D /* REDRegistry.h in Headers */,
+				3D77883714AE8FD60061765D /* REDParamsNumberEditor.h in Headers */,
+				3D77883914AE8FD60061765D /* REDPhoneRoot.h in Headers */,
+				3D77883B14AE8FD60061765D /* REDTabParamsRoot.h in Headers */,
+				3D77883D14AE8FD60061765D /* REDTabSetsRoot.h in Headers */,
+				3D77883F14AE8FD60061765D /* REDAdjustmentPopover.h in Headers */,
+				3D77884114AE8FD60061765D /* REDImageFactory.h in Headers */,
+				3D77884314AE8FD60061765D /* REDMainSelector.h in Headers */,
+				3D77884514AE8FD60061765D /* REDNudger.h in Headers */,
+				3D77884714AE8FD60061765D /* REDNumericalAdjustment.h in Headers */,
+				3D77884914AE8FD60061765D /* REDOverlay.h in Headers */,
+				3D77884B14AE8FD60061765D /* REDParamPicker.h in Headers */,
+				3D77884D14AE8FD60061765D /* REDParamSelectPopover.h in Headers */,
+				3D77884F14AE8FD60061765D /* REDPopover.h in Headers */,
+				3D88C76214AEA2D10029632F /* REDSliderView.h in Headers */,
+				3D88C76614AEACB90029632F /* REDWindow.h in Headers */,
+				3D88C76A14AEACDF0029632F /* REDPhoneWindow.h in Headers */,
+				3D88C76F14AEB03E0029632F /* REDPadWindow.h in Headers */,
+				3D88C77314AEB0CB0029632F /* REDFloatingViewController.h in Headers */,
+				3D88C77714AEBAF30029632F /* REDInsetViewController.h in Headers */,
+				3D2AD0DA14CFA55700D9A4FB /* REDLogSink.h in Headers */,
+				3D2AD0DD14CFA6BB00D9A4FB /* REDSinglePostSink.h in Headers */,
+				3D663E5414CFBD1200428ECC /* REDLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3D7787CC14AE89DC0061765D /* REDlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7787F314AE89DD0061765D /* Build configuration list for PBXNativeTarget "REDlib" */;
+			buildPhases = (
+				3D7787C914AE89DC0061765D /* Sources */,
+				3D7787CA14AE89DC0061765D /* Frameworks */,
+				3D7787CB14AE89DC0061765D /* Headers */,
+				3D2132D414AF042100344128 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = REDlib;
+			productName = REDlib;
+			productReference = 3D7787CD14AE89DC0061765D /* libREDlib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3D7787DC14AE89DC0061765D /* REDlibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7787F614AE89DD0061765D /* Build configuration list for PBXNativeTarget "REDlibTests" */;
+			buildPhases = (
+				3D7787D814AE89DC0061765D /* Sources */,
+				3D7787D914AE89DC0061765D /* Frameworks */,
+				3D7787DA14AE89DC0061765D /* Resources */,
+				3D7787DB14AE89DC0061765D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D7787E614AE89DD0061765D /* PBXTargetDependency */,
+			);
+			name = REDlibTests;
+			productName = REDlibTests;
+			productReference = 3D7787DD14AE89DC0061765D /* REDlibTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3D88C73914AE97A60029632F /* REDlibExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D88C75614AE97A60029632F /* Build configuration list for PBXNativeTarget "REDlibExample" */;
+			buildPhases = (
+				3D88C73614AE97A60029632F /* Sources */,
+				3D88C73714AE97A60029632F /* Frameworks */,
+				3D88C73814AE97A60029632F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D88C75A14AE98680029632F /* PBXTargetDependency */,
+			);
+			name = REDlibExample;
+			productName = REDlibExample;
+			productReference = 3D88C73A14AE97A60029632F /* REDlibExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D7787C414AE89DC0061765D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3D7787C714AE89DC0061765D /* Build configuration list for PBXProject "REDlib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D7787C214AE89DC0061765D;
+			productRefGroup = 3D7787CE14AE89DC0061765D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D7787CC14AE89DC0061765D /* REDlib */,
+				3D7787DC14AE89DC0061765D /* REDlibTests */,
+				3D88C73914AE97A60029632F /* REDlibExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D7787DA14AE89DC0061765D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7787ED14AE89DD0061765D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D88C73814AE97A60029632F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D88C74414AE97A60029632F /* InfoPlist.strings in Resources */,
+				3D88C74D14AE97A60029632F /* MainStoryboard_iPhone.storyboard in Resources */,
+				3D88C75014AE97A60029632F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D2132D414AF042100344128 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Version 2.0 (updated for Xcode 4, with some fixes)\n# Changes:\n#    - Works with xcode 4, even when running xcode 3 projects (Workarounds for apple bugs)\n#    - Faster / better: only runs lipo once, instead of once per recursion\n#    - Added some debugging statemetns that can be switched on/off by changing the DEBUG_THIS_SCRIPT variable to \"true\"\n#    - Fixed some typos\n# \n# Purpose:\n#   Create a static library for iPhone from within XCode\n#   Because Apple staff DELIBERATELY broke Xcode to make this impossible from the GUI (Xcode 3.2.3 specifically states this in the Release notes!)\n#   ...no, I don't understand why they did this!\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n# More info: see this Stack Overflow question: http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\"\nxcodebuild -configuration \"${CONFIGURATION}\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\n# * needs to be outside the double quotes?\ncp \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include/\"* \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\nfi\nfi";
+			showEnvVarsInLog = 0;
+		};
+		3D7787DB14AE89DC0061765D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D7787C914AE89DC0061765D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D77883414AE8FD60061765D /* REDlibInternal.m in Sources */,
+				3D77883614AE8FD60061765D /* REDRegistry.m in Sources */,
+				3D77883814AE8FD60061765D /* REDParamsNumberEditor.m in Sources */,
+				3D77883A14AE8FD60061765D /* REDPhoneRoot.m in Sources */,
+				3D77883C14AE8FD60061765D /* REDTabParamsRoot.m in Sources */,
+				3D77883E14AE8FD60061765D /* REDTabSetsRoot.m in Sources */,
+				3D77884014AE8FD60061765D /* REDAdjustmentPopover.m in Sources */,
+				3D77884214AE8FD60061765D /* REDImageFactory.m in Sources */,
+				3D77884414AE8FD60061765D /* REDMainSelector.m in Sources */,
+				3D77884614AE8FD60061765D /* REDNudger.m in Sources */,
+				3D77884814AE8FD60061765D /* REDNumericalAdjustment.m in Sources */,
+				3D77884A14AE8FD60061765D /* REDOverlay.m in Sources */,
+				3D77884C14AE8FD60061765D /* REDParamPicker.m in Sources */,
+				3D77884E14AE8FD60061765D /* REDParamSelectPopover.m in Sources */,
+				3D77885014AE8FD60061765D /* REDPopover.m in Sources */,
+				3D88C76314AEA2D10029632F /* REDSliderView.m in Sources */,
+				3D88C76714AEACB90029632F /* REDWindow.m in Sources */,
+				3D88C76B14AEACDF0029632F /* REDPhoneWindow.m in Sources */,
+				3D88C77014AEB03E0029632F /* REDPadWindow.m in Sources */,
+				3D88C77414AEB0CB0029632F /* REDFloatingViewController.m in Sources */,
+				3D88C77814AEBAF30029632F /* REDInsetViewController.m in Sources */,
+				3D2AD0DE14CFA6BB00D9A4FB /* REDSinglePostSink.m in Sources */,
+				3D663E5514CFBD1200428ECC /* REDLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7787D814AE89DC0061765D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7787F014AE89DD0061765D /* REDlibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D88C73614AE97A60029632F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D88C74614AE97A60029632F /* main.m in Sources */,
+				3D88C74A14AE97A60029632F /* REDlibExampleAppDelegate.m in Sources */,
+				3D88C75314AE97A60029632F /* REDlibExampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D7787E614AE89DD0061765D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D7787CC14AE89DC0061765D /* REDlib */;
+			targetProxy = 3D7787E514AE89DD0061765D /* PBXContainerItemProxy */;
+		};
+		3D88C75A14AE98680029632F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D7787CC14AE89DC0061765D /* REDlib */;
+			targetProxy = 3D88C75914AE98680029632F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D7787EB14AE89DD0061765D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D7787EC14AE89DD0061765D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D77880614AE8E850061765D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D77880714AE8E850061765D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D88C74214AE97A60029632F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D88C74314AE97A60029632F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D88C74B14AE97A60029632F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D88C74C14AE97A60029632F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3D88C74E14AE97A60029632F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D88C74F14AE97A60029632F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D7787F114AE89DD0061765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D7787F214AE89DD0061765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D7787F414AE89DD0061765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/REDlib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlib/REDlib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D7787F514AE89DD0061765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/REDlib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlib/REDlib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3D7787F714AE89DD0061765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlib/REDlib-Prefix.pch";
+				INFOPLIST_FILE = "REDlibTests/REDlibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3D7787F814AE89DD0061765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlib/REDlib-Prefix.pch";
+				INFOPLIST_FILE = "REDlibTests/REDlibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		3D88C75414AE97A60029632F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlibExample/REDlibExample-Prefix.pch";
+				INFOPLIST_FILE = "REDlibExample/REDlibExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D88C75514AE97A60029632F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REDlibExample/REDlibExample-Prefix.pch";
+				INFOPLIST_FILE = "REDlibExample/REDlibExample-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D7787C714AE89DC0061765D /* Build configuration list for PBXProject "REDlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7787F114AE89DD0061765D /* Debug */,
+				3D7787F214AE89DD0061765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7787F314AE89DD0061765D /* Build configuration list for PBXNativeTarget "REDlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7787F414AE89DD0061765D /* Debug */,
+				3D7787F514AE89DD0061765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7787F614AE89DD0061765D /* Build configuration list for PBXNativeTarget "REDlibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7787F714AE89DD0061765D /* Debug */,
+				3D7787F814AE89DD0061765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D88C75614AE97A60029632F /* Build configuration list for PBXNativeTarget "REDlibExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D88C75414AE97A60029632F /* Debug */,
+				3D88C75514AE97A60029632F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D7787C414AE89DC0061765D /* Project object */;
+}
