@@ -24,7 +24,7 @@
     
 
     [[REDLog sharedInstance] addNetworkKey:@"m6VjjaJW0xB32RMfKKCGzb7PXxwZeBns"];
-//    [[REDLog sharedInstance] addNetworkKey:@"rpPdKOJpTBU5kBzLZZauruR2dJJJicCO" forURL:@"http://localhost:3000/log"];
+    [[REDLog sharedInstance] addNetworkKey:@"rpPdKOJpTBU5kBzLZZauruR2dJJJicCO" forURL:@"http://localhost:3000/log"];
     
     RLog(@"App start %d", 1234);
     

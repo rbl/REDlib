@@ -17,7 +17,7 @@
     if (self)
     {
         self.title = @"Sets";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:[REDlibInternal sharedInstance] action:@selector(removeFromWindow)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:[REDlibInternal sharedInstance] action:@selector(hideControlWindow)];
         
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;

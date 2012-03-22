@@ -10,6 +10,7 @@
 
 #import "REDLog.h"
 #import "REDLogSink.h"
+
 #import "REDSinglePostSink.h"
 
 #import <sys/socket.h> // Per msqr
@@ -45,7 +46,7 @@ void RLog(NSString *format, ...)
     va_end(args);
 }
 
-void RLogLineNo(char* file, int lineno, int level, NSString* facility, NSString* format, ...)
+void RLogLineNo(const char* file, int lineno, int level, NSString* facility, NSString* format, ...)
 {
     va_list args;
     va_start(args, format);
@@ -61,7 +62,7 @@ void RLogv(int level, NSString* facility, NSString* format, va_list args)
     [[REDLog sharedInstance] log:msg level:level facility:facility data:nil];
 }
 
-void RLogLineNov(char* file, int lineno, int level, NSString* facility, NSString* format, va_list args)
+void RLogLineNov(const char* file, int lineno, int level, NSString* facility, NSString* format, va_list args)
 {
     char* rpos = strrchr(file, '/');
     if (rpos) file = rpos + 1;
@@ -86,6 +87,43 @@ void RLogEnable(NSString* sinkName)
     
 }
 
+
+void RCLog(const char *format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    
+    RLogv(RLEVEL_DEFAULT, @"general", [NSString stringWithCString:format encoding:NSUTF8StringEncoding], args);
+    
+    va_end(args);
+}
+
+void RCLogLineNo(const char* file, int lineno, int level, const char* facility, const char* format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    
+    RLogLineNov(file, lineno, level, [NSString stringWithCString:facility encoding:NSUTF8StringEncoding], [NSString stringWithCString:format encoding:NSUTF8StringEncoding], args);
+    
+    va_end(args);
+}
+
+
+void RCLogv(int level, const char* facility, const char* format, va_list args)
+{
+    RLogv(level, [NSString stringWithCString:facility encoding:NSUTF8StringEncoding], [NSString stringWithCString:format encoding:NSUTF8StringEncoding], args);
+}
+
+void RCLogLineNov(const char* file, int lineno, int level, const char* facility, const char* format, va_list args)
+{
+    RLogLineNov(file, lineno, level, [NSString stringWithCString:facility encoding:NSUTF8StringEncoding], [NSString stringWithCString:facility encoding:NSUTF8StringEncoding], args);
+}
+
+void RCLogEnable(const char* sinkName)
+{
+    if (!sinkName) return;
+    RLogEnable([NSString stringWithCString:sinkName encoding:NSUTF8StringEncoding]);
+}
 
 ////////////////////////////////////////////////////////////
 #pragma mark -

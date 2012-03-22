@@ -8,7 +8,10 @@
  */
 
 #import <Foundation/Foundation.h>
-//#import <UIKit/UIKit.h>
+#import "REDClib.h"
+#import "REDLog.h"
+#import "REDLogSink.h"
+
 @class UIWindow;
 
 @interface NSString(REDlib)
@@ -45,36 +48,6 @@
 
 @end
 
-extern const int RLEVEL_TRACE;
-extern const int RLEVEL_DEBUG;
-extern const int RLEVEL_INFO;
-extern const int RLEVEL_WARNING;
-extern const int RLEVEL_WARN;
-extern const int RLEVEL_ERROR;
-extern const int RLEVEL_ERR;
-extern const int RLEVEL_CRITICAL;
-extern const int RLEVEL_CRIT;
-
-extern const int RLEVEL_DEFAULT;
-
-extern void RLog(NSString *format, ...);
-extern void RLogLineNo(char* file, int lineno, int level, NSString* facility, NSString* format, ...);
-extern void RLogv(int level, NSString* facility, NSString* format, va_list args);
-extern void RLogLineNov(char* file, int lineno, int level, NSString* facility, NSString* format, va_list args);
-
-extern void RLogEnable(NSString* sinkName);
-
-#define RLOG(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_DEFAULT, facility, __VA_ARGS__)
-
-#define RLOG_TRACE(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_TRACE, facility, __VA_ARGS__)
-#define RLOG_DEBUG(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_DEBUG, facility, __VA_ARGS__)
-#define RLOG_INFO(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_INFO, facility, __VA_ARGS__)
-#define RLOG_WARNING(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_WARNING, facility, __VA_ARGS__)
-#define RLOG_WARN(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_WARN, facility, __VA_ARGS__)
-#define RLOG_ERROR(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_ERROR, facility, __VA_ARGS__)
-#define RLOG_ERR(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_ERR, facility, __VA_ARGS__)
-#define RLOG_CRITICAL(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_CRITICAL, facility, __VA_ARGS__)
-#define RLOG_CRIT(facility, ...) RLogLineNo(__FILE__,__LINE__, RLEVEL_CRIT, facility, __VA_ARGS__)
 
 
 #define REDLIB_PARAM_CHANGED			@"REDLIB_PARAM_CHANGED"

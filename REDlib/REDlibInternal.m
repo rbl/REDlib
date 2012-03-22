@@ -16,6 +16,38 @@
 
 #import <UIKit/UIKit.h>
 
+// The C library
+void red_showControlWindow(void)
+{
+    [REDlib showControlWindow];
+}
+
+void red_hideControlWindow(void)
+{
+    [REDlib hideControlWindow];
+}
+
+const int red_int(const char* name)
+{
+    return [[NSString stringWithCString:name encoding:NSUTF8StringEncoding] piv];
+}
+
+const int red_intd(const char* name, int def)
+{
+    return [[NSString stringWithCString:name encoding:NSUTF8StringEncoding] pivd:def];
+}
+
+const double red_double(const char* name)
+{
+    return [[NSString stringWithCString:name encoding:NSUTF8StringEncoding] pfv];    
+}
+
+const double red_doubled(const char* name, double def)
+{
+    return [[NSString stringWithCString:name encoding:NSUTF8StringEncoding] pfvd:def];    
+}
+
+
 // Implementation of REDlib categories
 @implementation NSString(REDLib)
 

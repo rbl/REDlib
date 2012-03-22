@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D2AD0DA14CFA55700D9A4FB /* REDLogSink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D2AD0DD14CFA6BB00D9A4FB /* REDSinglePostSink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2AD0DB14CFA6BB00D9A4FB /* REDSinglePostSink.h */; };
 		3D2AD0DE14CFA6BB00D9A4FB /* REDSinglePostSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AD0DC14CFA6BB00D9A4FB /* REDSinglePostSink.m */; };
-		3D663E5414CFBD1200428ECC /* REDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D663E5214CFBD1200428ECC /* REDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D5E0AB11505282B00E76458 /* REDCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5E0AB01505282A00E76458 /* REDCLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D5E0AB415052CDB00E76458 /* REDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5E0AB215052CDB00E76458 /* REDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D5E0AB515052CDB00E76458 /* REDLogSink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5E0AB315052CDB00E76458 /* REDLogSink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D5E0AB715052D2800E76458 /* REDClib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5E0AB615052D2800E76458 /* REDClib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D663E5514CFBD1200428ECC /* REDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D663E5314CFBD1200428ECC /* REDLog.m */; };
 		3D7787D114AE89DC0061765D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787D014AE89DC0061765D /* Foundation.framework */; };
 		3D7787DF14AE89DC0061765D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7787DE14AE89DC0061765D /* SenTestingKit.framework */; };
@@ -94,10 +96,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REDLogSink.h; path = ../REDlib/log/REDLogSink.h; sourceTree = "<group>"; };
 		3D2AD0DB14CFA6BB00D9A4FB /* REDSinglePostSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDSinglePostSink.h; sourceTree = "<group>"; };
 		3D2AD0DC14CFA6BB00D9A4FB /* REDSinglePostSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDSinglePostSink.m; sourceTree = "<group>"; };
-		3D663E5214CFBD1200428ECC /* REDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REDLog.h; path = ../REDlib/log/REDLog.h; sourceTree = "<group>"; };
+		3D5E0AB01505282A00E76458 /* REDCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDCLog.h; sourceTree = "<group>"; };
+		3D5E0AB215052CDB00E76458 /* REDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDLog.h; sourceTree = "<group>"; };
+		3D5E0AB315052CDB00E76458 /* REDLogSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDLogSink.h; sourceTree = "<group>"; };
+		3D5E0AB615052D2800E76458 /* REDClib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDClib.h; sourceTree = "<group>"; };
 		3D663E5314CFBD1200428ECC /* REDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDLog.m; sourceTree = "<group>"; };
 		3D7787CD14AE89DC0061765D /* libREDlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libREDlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7787D014AE89DC0061765D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -315,8 +319,10 @@
 			isa = PBXGroup;
 			children = (
 				3D77880F14AE8FC30061765D /* REDlib.h */,
-				3D663E5214CFBD1200428ECC /* REDLog.h */,
-				3D2AD0D914CFA55700D9A4FB /* REDLogSink.h */,
+				3D5E0AB615052D2800E76458 /* REDClib.h */,
+				3D5E0AB215052CDB00E76458 /* REDLog.h */,
+				3D5E0AB315052CDB00E76458 /* REDLogSink.h */,
+				3D5E0AB01505282A00E76458 /* REDCLog.h */,
 				3D77881014AE8FC30061765D /* ExampleREDParms.h */,
 			);
 			path = include;
@@ -420,6 +426,7 @@
 				3D77881214AE8FC30061765D /* ExampleREDParms.h in Headers */,
 				3D77883314AE8FD60061765D /* REDlibInternal.h in Headers */,
 				3D77883514AE8FD60061765D /* REDRegistry.h in Headers */,
+				3D5E0AB11505282B00E76458 /* REDCLog.h in Headers */,
 				3D77883714AE8FD60061765D /* REDParamsNumberEditor.h in Headers */,
 				3D77883914AE8FD60061765D /* REDPhoneRoot.h in Headers */,
 				3D77883B14AE8FD60061765D /* REDTabParamsRoot.h in Headers */,
@@ -439,9 +446,10 @@
 				3D88C76F14AEB03E0029632F /* REDPadWindow.h in Headers */,
 				3D88C77314AEB0CB0029632F /* REDFloatingViewController.h in Headers */,
 				3D88C77714AEBAF30029632F /* REDInsetViewController.h in Headers */,
-				3D2AD0DA14CFA55700D9A4FB /* REDLogSink.h in Headers */,
 				3D2AD0DD14CFA6BB00D9A4FB /* REDSinglePostSink.h in Headers */,
-				3D663E5414CFBD1200428ECC /* REDLog.h in Headers */,
+				3D5E0AB415052CDB00E76458 /* REDLog.h in Headers */,
+				3D5E0AB515052CDB00E76458 /* REDLogSink.h in Headers */,
+				3D5E0AB715052D2800E76458 /* REDClib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
