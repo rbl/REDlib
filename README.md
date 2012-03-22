@@ -3,7 +3,9 @@ REDlib
 
 The **R**eality Box Labs **E**xpert **D**ebugging **lib**rary is a client library for iOS (and eventually javascript) that provides networked logging and on-device parameter modification.
 
-The network logging component allows you to watch debug logs in realtime even when not connected to Xcode. This is not only handy for situations where you need to use the dock connector for an accessory or need to be further away from a computer than a cable will allow, but we've also found it useful in general as a nicer UI for device logging.  The library is configured by default to send logs to [redlib.realityboxlabs.com](http://redlib.realityboxlabs.com) which provides a free service for viewing you logs, but it can also be configured to send them to your own server.
+![Control UI](/rbl/REDlib/raw/master/docs/ControlUI.jpg)
+
+The network logging component allows you to watch debug logs in realtime even when not connected to Xcode. This is not only handy for situations where you need to use the dock connector for an accessory or need to be further away from a computer than a cable will allow, but we've also found it useful in general as a nicer UI for device logging.  The library is configured by default to send logs to [redlib.realityboxlabs.com](http://redlib.realityboxlabs.com) which provides a free service for viewing your logs, but it can also be configured to send them to your own server.
 
 On device parameter modification allows you to easily tweak numerical parameters that your software relies on without going back to the compiler and without loading a manual configuration file.  This functionality was originally created to help tweak animation settings, but it has provided to be useful for more non-UI centric things like digital filter adjustment etc. 
 
@@ -149,7 +151,7 @@ These macros all supply the filename and line number to the lower level logging 
 
 #### Log Sinks
 
-By default, log messages go nowhere. You must add or enable a log sink before they will. If you want to see your logs on the regular console, enable the sink for NSLog.
+By default, log messages go nowhere. You must add or enable a log sink before they will. If you want to see your logs on the regular console, enable the sink for `NSLog()`.
 
 ```objc
 RLogEnable(@"nslog");
@@ -171,7 +173,7 @@ For more information about how logs are submitted, check out the source for `RED
 
 ### On Device Parameter Management
 
-The original purpose of REDlib was to provide a way to edit parameters on a device without needing to edit code and recompile, or edit a config file and restart the application.  If you want to use this feature, be sure you've added the `-all_load` linker flag or your app will terminate as soon as it tries to use any of the functions or properties in the custom NSString category. This is described in Step #4 above.
+The original purpose of REDlib was to provide a way to edit parameters on a device without needing to edit code and recompile, or edit a config file and restart the application.  If you want to use this feature, be sure you've added the `-all_load` linker flag or your app will terminate as soon as it tries to use any of the functions or properties in the custom `NSString` category. This is described in Step #4 above.
 
 Parameters are named using strings, and their value is accessed using properties and functions in a custom class of NSString. This allows very terse, yet still descriptive code.
 
@@ -185,26 +187,26 @@ REDlib currently supports three types of parameters: `floats`, `ints`, and `stri
   * `int = i`
   * `string = s` (can not yet be modified on-device)
   
-In addition to the property, a function which takes a default value to return in case the parameter isn't defined in the current parameter set exists. This has the same name as the property with a 'd' added at the end. 
+In addition to the property, a function which takes a default value to return in case the parameter isn't defined in the current parameter set. This has the same name as the property with a 'd' added at the end. 
 
   * `[@"a float" pfvd:1.2]`
   * `[@"an int" pivd:12]`
   * `[@"a string" psvd:@"Default text"]`
   
-If you have an object which respects key-value coding, you can also directly bind a named REDlib parameter to a specific key on that object. If you do this, when the parameter changes the object will receive messages to update the value of that key. Since `UIView` respects key-value coding, this means you can bind parameters directly to a view and watch the view change in realtime as you manipulate the parameter using the on-device REDlib UI.
+If you have an object which respects key-value coding, you can also directly bind a named REDlib parameter to a specific key on that object. If you do this, when the parameter changes the object will receive messages to update the value of that key. Since `UIView` respects key-value coding, this means you can bind parameters directly to a view and watch the view change in realtime as you manipulate the parameter using the on-device REDlib UI. Neat.
 
 Two of the most typical things you need to see update live on a view are it's frame and it's center. These have been special cased as key names.
 
-  * "x" = `frame.origin.x`
-  * "y" = `frame.origin.y`
-  * "width" = `frame.size.width`
-  * "height" = `frame.size.height`
-  * "center.x" = `frame.center.x`
-  * "center.y" = `frame.center.y`
+  * x = `frame.origin.x`
+  * y = `frame.origin.y`
+  * width = `frame.size.width`
+  * height = `frame.size.height`
+  * center.x = `frame.center.x`
+  * center.y = `frame.center.y`
   
 If you use one of these special names as a key name, then the object the parameter is bound to is assumed to be a view, the appropriate structure is read from the object, modified, and set back to the object.
 
-To bind parameters to objects (usually views) use the bindToProperty:onObject: method added to NSString.
+To bind parameters to objects use the `bindToProperty:onObject:` method added to `NSString`. 
 
 ```objc
 UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0,0,10,10)];
@@ -234,9 +236,11 @@ If you have a more complex set of windows or gestures, you can also programmatic
 [REDlib hideControlWindow];
 ```
 
-The control window allows you to see the current value of all defined parameters and let's you select a parameter to modify. If you parameter names contain spaces, the first word of the parameter is used to group them in the list.
+The control window allows you to see the current value of all defined parameters and let's you select a parameter to modify. If your parameter names contain spaces, the first word of the parameter is used to group them in the list.
 
 When a parameter is tapped in the UI, the window changes to the parameter slider for numerical parameters. Currently only numerical parameters can be changed.  The parameter slider shows:
+
+![Parameter Slider](/rbl/REDlib/raw/master/docs/Slider.jpg)
 
   * The name of the parameter (minus the first word if the name contains spaces)
   * The current value at the top
