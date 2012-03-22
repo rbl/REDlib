@@ -21,7 +21,7 @@ Getting It
 
 If you want to grab the source and build it from scratch, see the section further down.
 
-Most people will just want to grab the latest pre-compiled binary from here:
+Most people will just want to grab the latest pre-compiled binary from <http://redlib.realityboxlabs.com/download>
 
 A full example application is included in the source distribution.
 
@@ -254,13 +254,15 @@ To change the multiplier, tap on the drag area instead of dragging. The multipli
 
 Parameter sets will let you easily swap between an A and B (or more) set of parameters all at once. This feature is currently only partially implemented and should largely be ignored for now.
 
-Credit
-======
+Credits
+=======
 
-REDlib began life as ParmyLib at the 2011 iOS Dev Camp in Santa Clara, CA. It was originally conceived by [Tom Seago](https://github.com/olliewagner) and [Ollie Wagner](https://github.com/olliewagner). The original ParmyLib included only the on-device parameter manipulation and used a very different UI.
+REDlib began life as ParmyLib at the 2011 iOS Dev Camp in Santa Clara, CA. It was originally conceived by [Tom Seago](https://github.com/tomseago) and [Ollie Wagner](https://github.com/olliewagner). The original ParmyLib included only the on-device parameter manipulation and used a very different UI.
 
 Since then, Tom (hey, that's me!) added the logging capability and entirely re-wrote the UI layer. This new version of the library has been given a more appealing name that also works in the branding of his small company [Reality Box Labs](http://www.realityboxlabs.com/)
 
 To provide the maximum utility this library is licensed under a permissive MIT license contained in the `license.txt` file. Basically, do what you want, buyer beware, and don't be a dick (i.e. leave the copyright notices intact). Commercial or Open Source, go nuts.
 
-Copyright (c) 2012 Reality Box Labs, LLC
+
+
+**Copyright (c) 2012 Reality Box Labs, LLC**
