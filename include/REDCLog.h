@@ -3,7 +3,7 @@
 //  REDlib
 //
 //  Created by Tom Seago on 3/5/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Reality Box Labs LLC. All rights reserved.
 //
 
 #ifndef REDlib_REDCLog_h

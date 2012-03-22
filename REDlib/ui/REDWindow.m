@@ -3,7 +3,7 @@
 //  REDlib
 //
 //  Created by Tom Seago on 12/30/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Reality Box Labs LLC. All rights reserved.
 //
 
 #import "REDWindow.h"
@@ -78,7 +78,7 @@
     REDTabSetsRoot* root = [[REDTabSetsRoot alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:root];
     
-    nav.navigationBar.tintColor = [UIColor redColor];
+    nav.navigationBar.tintColor = RED_TINT_COLOR;
     nav.title = root.title;
     // TODO: Implement custom tab bar icons for this tab
     

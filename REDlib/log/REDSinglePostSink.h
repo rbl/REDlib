@@ -3,7 +3,7 @@
 //  REDlib
 //
 //  Created by Tom Seago on 1/24/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 Reality Box Labs LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

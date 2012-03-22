@@ -3,7 +3,7 @@
 //  NoNameLib
 //
 //  Created by Tom Seago on 7/16/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Reality Box Labs LLC. All rights reserved.
 //
 
 #import "REDlib.h"
@@ -11,8 +11,6 @@
 
 #import "REDRegistry.h"
 #import "REDWindow.h"
-
-#import "REDPhoneRoot.h"
 
 #import <UIKit/UIKit.h>
 

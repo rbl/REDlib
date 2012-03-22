@@ -3,15 +3,15 @@
 //  REDlib
 //
 //  Created by Tom Seago on 3/5/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Reality Box Labs LLC. All rights reserved.
 //
 
 #ifndef REDlib_REDClib_h
 #define REDlib_REDClib_h
 
 #define REDLIB_VERSION_MAJOR    0
-#define REDLIB_VERSION_MINOR    2
-#define REDLIB_VERSION_STRING   "0.2"
+#define REDLIB_VERSION_MINOR    3
+#define REDLIB_VERSION_STRING   "0.3"
 
 #ifdef __cplusplus
 extern "C" {

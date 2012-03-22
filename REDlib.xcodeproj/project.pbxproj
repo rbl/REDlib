@@ -30,8 +30,6 @@
 		3D77883614AE8FD60061765D /* REDRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881614AE8FD60061765D /* REDRegistry.m */; };
 		3D77883714AE8FD60061765D /* REDParamsNumberEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */; };
 		3D77883814AE8FD60061765D /* REDParamsNumberEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */; };
-		3D77883914AE8FD60061765D /* REDPhoneRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881B14AE8FD60061765D /* REDPhoneRoot.h */; };
-		3D77883A14AE8FD60061765D /* REDPhoneRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881C14AE8FD60061765D /* REDPhoneRoot.m */; };
 		3D77883B14AE8FD60061765D /* REDTabParamsRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */; };
 		3D77883C14AE8FD60061765D /* REDTabParamsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */; };
 		3D77883D14AE8FD60061765D /* REDTabSetsRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */; };
@@ -126,8 +124,6 @@
 		3D77881614AE8FD60061765D /* REDRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDRegistry.m; sourceTree = "<group>"; };
 		3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDParamsNumberEditor.h; sourceTree = "<group>"; };
 		3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDParamsNumberEditor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3D77881B14AE8FD60061765D /* REDPhoneRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPhoneRoot.h; sourceTree = "<group>"; };
-		3D77881C14AE8FD60061765D /* REDPhoneRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPhoneRoot.m; sourceTree = "<group>"; };
 		3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDTabParamsRoot.h; sourceTree = "<group>"; };
 		3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REDTabParamsRoot.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDTabSetsRoot.h; sourceTree = "<group>"; };
@@ -368,8 +364,6 @@
 			children = (
 				3D77881914AE8FD60061765D /* REDParamsNumberEditor.h */,
 				3D77881A14AE8FD60061765D /* REDParamsNumberEditor.m */,
-				3D77881B14AE8FD60061765D /* REDPhoneRoot.h */,
-				3D77881C14AE8FD60061765D /* REDPhoneRoot.m */,
 				3D77881D14AE8FD60061765D /* REDTabParamsRoot.h */,
 				3D77881E14AE8FD60061765D /* REDTabParamsRoot.m */,
 				3D77881F14AE8FD60061765D /* REDTabSetsRoot.h */,
@@ -428,7 +422,6 @@
 				3D77883514AE8FD60061765D /* REDRegistry.h in Headers */,
 				3D5E0AB11505282B00E76458 /* REDCLog.h in Headers */,
 				3D77883714AE8FD60061765D /* REDParamsNumberEditor.h in Headers */,
-				3D77883914AE8FD60061765D /* REDPhoneRoot.h in Headers */,
 				3D77883B14AE8FD60061765D /* REDTabParamsRoot.h in Headers */,
 				3D77883D14AE8FD60061765D /* REDTabSetsRoot.h in Headers */,
 				3D77883F14AE8FD60061765D /* REDAdjustmentPopover.h in Headers */,
@@ -518,6 +511,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Reality Box Labs LLC";
 			};
 			buildConfigurationList = 3D7787C714AE89DC0061765D /* Build configuration list for PBXProject "REDlib" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -597,7 +591,6 @@
 				3D77883414AE8FD60061765D /* REDlibInternal.m in Sources */,
 				3D77883614AE8FD60061765D /* REDRegistry.m in Sources */,
 				3D77883814AE8FD60061765D /* REDParamsNumberEditor.m in Sources */,
-				3D77883A14AE8FD60061765D /* REDPhoneRoot.m in Sources */,
 				3D77883C14AE8FD60061765D /* REDTabParamsRoot.m in Sources */,
 				3D77883E14AE8FD60061765D /* REDTabSetsRoot.m in Sources */,
 				3D77884014AE8FD60061765D /* REDAdjustmentPopover.m in Sources */,
