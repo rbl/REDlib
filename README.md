@@ -97,20 +97,11 @@ For more information about using the parameter UI and the logging see the refere
 Building From Source
 --------------------
 
-When you build the REDlib Xcode project, it will always build both the simulator and the device version of the library. These two will then be combined into a universal binary `.a` which makes life way easier for developers later.
+Building from the Xcode project file will no longer create a fat library automatically. In other words, the output of just loading the Xcode project and hitting build is only going to run on a device or a simulator, but not both.
 
-To create a distribution you need 2 things, the headers and the universal `.a` file. To both of these you need to find the paths that Xcode decided to hide things at. Look at the end of the build log output and you should see a section similar to this
+That's not what we want for a distribution build though because it's annoying. Thus, there is a make file. Simply running `make` in the root directory should take care of you. It will build the project 4 different times, twice for arm and twice for the simulator, and will combine everything together into a single `.a` file.
 
-```
-Taking device build from: /Users/tseago/Library/Developer/Xcode/DerivedData/REDlib-gyzpbplgbdohyhbjemyvxfjmcalr/Build/Products/Debug-iphoneos
-Taking simulator build from: /Users/tseago/Library/Developer/Xcode/DerivedData/REDlib-gyzpbplgbdohyhbjemyvxfjmcalr/Build/Products/Debug-iphonesimulator
-...I will output a universal build to: /Users/tseago/Library/Developer/Xcode/DerivedData/REDlib-gyzpbplgbdohyhbjemyvxfjmcalr/Build/Products/Debug-universal
-lipo: for current configuration (Debug) creating output file: /Users/tseago/Library/Developer/Xcode/DerivedData/REDlib-gyzpbplgbdohyhbjemyvxfjmcalr/Build/Products/Debug-universal/libREDlib.a
-```
-
-From this you can see that Xcode created a temporary directory for the project and then stores build products for the simulator and the device in separate sub directories. The REDlib build scripts force both of those to build and then uses `lipo` to combine them into a `-universal` directory.
-
-This `-universal` library is the one you want to use. It contains the universal `.a` and the associated header files.
+The final static library suitable for inclusion in any type of iOS project is placed in the `dist` directory along with the header files that match it. This is what is included in all binary distributions of the project.
 
 Reference
 ---------
@@ -265,4 +256,4 @@ To provide the maximum utility this library is licensed under a permissive MIT l
 
 
 
-**Copyright (c) 2012 Reality Box Labs, LLC**
+**Copyright (c) 2012-2014 Reality Box Labs, LLC**

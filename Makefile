@@ -10,6 +10,7 @@ fat: arm arm64 i386 x86_64
 	mkdir -p ${DIST}
 	lipo -create './build-arm/${LIB}' './build-arm64/${LIB}' './build-i386/${LIB}' './build-x86_64/${LIB}' -output '${DIST}/${LIB}'
 	cp -a ./build-arm/usr ${DIST}
+	cp README.md ${DIST}
 
 arm:
 	xcodebuild -project ${PROJ} -configuration 'Release' -sdk 'iphoneos7.0' clean build ARCHS='armv7 armv7s' IPHONEOS_DEPLOYMENT_TARGET='5.0' TARGET_BUILD_DIR='./build-arm' BUILT_PRODUCTS_DIR='./build-arm'
