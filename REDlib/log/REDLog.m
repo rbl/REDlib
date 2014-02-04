@@ -491,7 +491,7 @@ static REDLog *_sharedREDLog = nil;
         
         //NSMutableString* line = [NSMutableString stringWithFormat:@"%@ ", time];
         NSMutableString* line = [NSMutableString string];
-        [line appendString:[REDLog stringForLevel:level]];
+        [line appendString:[REDLog stringForLevelFixedWidth:level]];
         [line appendFormat:@" %@ %@", facility, msg];
         NSLog(@"%@", line);
     }
